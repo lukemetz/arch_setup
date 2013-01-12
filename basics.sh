@@ -1,4 +1,5 @@
-pacman -S nvidia nvidia-utils sudo \
+pacman -S xorg-server xorg-xinit xorg-server-utils \
+  nvidia nvidia-utils mesa sudo\
   firefox gvim rxvt-unicode pcmanfm evince \
   awesome xcompmgr gtk-engines gtk-engine-murrine \
   flashplugin libvdpau \
@@ -13,15 +14,16 @@ pacman -S nvidia nvidia-utils sudo \
   ogre bullet \
   ttf-inconsolata ttf-dejavu \
   firefox-adblock-plus \
-  boost-libs boost
+  boost-libs boost lua lua-filesystem
 
 nvidia-xconfig
 echo "blacklist pcspkr" > nobeep.conf
 mv nobeep.conf /etc/modprobe.d/
-
 cd ../
 chown luke arch_setup -R
 cd arch_setup
+
+echo "exec awesome" > ~/.xinitrc
 
 echo "Now your turn!"
 echo "=============="
@@ -33,4 +35,5 @@ echo "Setup git (git_setup.py)"
 echo "Install trackpad support"
 echo "Install yaourt based packages (aur.sh)"
 echo "Grab my dotfiles (dotfile.sh)"
+echo "Grab my vim config"
 echo "Reboot and Enjoy!"
