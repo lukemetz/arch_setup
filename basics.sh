@@ -1,9 +1,9 @@
 pacman -S nvidia nvidia-utils sudo \
-  firefox gvim rxvt-unicode pcmanfs evince \
-  awesome xcompmgr gtk-engines gtk-engines-murrine \
-  flashplugin libvdpau \ 
+  firefox gvim rxvt-unicode pcmanfm evince \
+  awesome xcompmgr gtk-engines gtk-engine-murrine \
+  flashplugin libvdpau \
   openssh \
-  xkill xclip xsel wget gtk3 \
+  xorg-xkill xclip xsel wget gtk3 \
   python luajit \
   oxygen-icons \
   bash-completion colordiff \
@@ -12,12 +12,16 @@ pacman -S nvidia nvidia-utils sudo \
   glew glfw \
   ogre bullet \
   ttf-inconsolata ttf-dejavu \
-  firefox-addblock-plus \
+  firefox-adblock-plus \
   boost-libs boost
 
 nvidia-xconfig
 echo "blacklist pcspkr" > nobeep.conf
 mv nobeep.conf /etc/modprobe.d/
+
+cd ../
+chown luke arch_setup -R
+cd arch_setup
 
 echo "Now your turn!"
 echo "=============="
