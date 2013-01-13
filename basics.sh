@@ -1,5 +1,5 @@
-sudo pacman -S nvidia nvidia-utils sudo \
-  firefox gvim rxvt-unicode pcmanfs \
+pacman -S nvidia nvidia-utils sudo \
+  firefox gvim rxvt-unicode pcmanfs evince \
   awesome xcompmgr gtk-engines gtk-engines-murrine \
   flashplugin libvdpau \ 
   openssh \
@@ -7,22 +7,26 @@ sudo pacman -S nvidia nvidia-utils sudo \
   python luajit \
   oxygen-icons \
   bash-completion colordiff \
-  premake \
+  premake premake scons\
   opencl-nvidia opencl-headers \
   glew glfw \
   ogre bullet \
   ttf-inconsolata ttf-dejavu \
-  firefox-addblock-plus
+  firefox-addblock-plus \
+  boost-libs boost
 
-sudo nvidia-xconfig
-sudo echo "blacklist pcspkr" > nobeep.conf
-sudo mv nobeep.conf /etc/modprobe.d/
+nvidia-xconfig
+echo "blacklist pcspkr" > nobeep.conf
+mv nobeep.conf /etc/modprobe.d/
 
-echo "Now You!"
-echo "==========="
+echo "Now your turn!"
+echo "=============="
+echo "Visudo"
 echo "Edit nvidia xconf"
-echo "Install yaourt"
-echo "Setup git"
-echo "Install trackpad support??"
-echo "install yaourt based packages"
-echo "Enjoy!"
+echo "su to your user"
+echo "Install yaourt (autoyaourt.sh)"
+echo "Setup git (git_setup.py)"
+echo "Install trackpad support"
+echo "Install yaourt based packages (aur.sh)"
+echo "Grab my dotfiles (dotfile.sh)"
+echo "Reboot and Enjoy!"
