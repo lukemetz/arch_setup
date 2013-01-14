@@ -15,7 +15,7 @@ pacman -S xorg-server xorg-xinit xorg-server-utils \
   ttf-inconsolata ttf-dejavu \
   firefox-adblock-plus \
   boost-libs boost lua lua-filesystem \
-  gdb
+  gdb feh
 
 nvidia-xconfig
 echo "blacklist pcspkr" > nobeep.conf
