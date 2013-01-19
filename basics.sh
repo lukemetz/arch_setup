@@ -15,7 +15,7 @@ pacman -S xorg-server xorg-xinit xorg-server-utils \
   ttf-inconsolata ttf-dejavu \
   firefox-adblock-plus \
   boost-libs boost lua lua-filesystem \
-  gdb feh
+  gdb feh scrot
 
 nvidia-xconfig
 echo "blacklist pcspkr" > nobeep.conf
@@ -23,6 +23,9 @@ mv nobeep.conf /etc/modprobe.d/
 cd ../
 chown luke arch_setup -R
 cd arch_setup
+
+# fix fonts such as on github
+ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/
 
 echo "exec awesome" > ~/.xinitrc
 
